@@ -15,12 +15,33 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Container(
-          color: Colors.red,
-          width: 200.0,
-          height: 200.0,
+        child: ClipPath(
+          clipper: Teeth(),
+          child: Container(
+            color: Colors.red,
+            width: 100.0,
+            height: 50.0,
+          ),
         ),
       ),
     );
   }
+}
+
+class Teeth extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    Path path = Path();
+    path.lineTo(10, 10);
+    path.lineTo(100, 100);
+    path.lineTo(200, 10);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return true;
+  }
+
 }
