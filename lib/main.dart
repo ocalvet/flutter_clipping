@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
           child: Container(
             color: Colors.red,
             width: 100.0,
-            height: 50.0,
+            height: 100.0,
           ),
         ),
       ),
@@ -32,8 +32,9 @@ class Teeth extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
-    path.moveTo(20, 20);
-    path.quadraticBezierTo(0, 50, 40, 40);
+    path.moveTo(0, 0);
+    path.quadraticBezierTo(0, size.height, size.width, size.height);
+    path.quadraticBezierTo(size.width, 0, 0, 0);
     // path.lineTo(10, 10);
     // path.lineTo(100, 100);
     // path.lineTo(200, 10);
