@@ -32,7 +32,8 @@ class Teeth extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
-    path.quadraticBezierTo(0, 10, size.width / 2, 40);
+    path.moveTo(20, 20);
+    path.quadraticBezierTo(0, 50, 40, 40);
     // path.lineTo(10, 10);
     // path.lineTo(100, 100);
     // path.lineTo(200, 10);
