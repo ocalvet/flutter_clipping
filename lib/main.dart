@@ -45,9 +45,6 @@ class Eye extends CustomClipper<Path> {
     path.moveTo(0, size.height/2);
     path.quadraticBezierTo(size.width/2, size.height, size.width, size.height/2);
     path.quadraticBezierTo(size.width/2, 0, 0, size.height/2);
-    // path.lineTo(10, 10);
-    // path.lineTo(100, 100);
-    // path.lineTo(200, 10);
     path.close();
     return path;
   }
