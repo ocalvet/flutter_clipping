@@ -16,11 +16,21 @@ class _MyAppState extends State<MyApp> {
       appBar: AppBar(),
       body: Center(
         child: ClipPath(
-          clipper: Teeth(),
+          clipper: Eye(),
           child: Container(
             color: Colors.red,
-            width: 100.0,
-            height: 100.0,
+            width: 300.0,
+            height: 300.0,
+            child: Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  color: Colors.black54
+                ),
+                width: 70,
+                height: 70,
+              ),
+            ),
           ),
         ),
       ),
@@ -28,13 +38,13 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class Teeth extends CustomClipper<Path> {
+class Eye extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     Path path = Path();
-    path.moveTo(0, 0);
-    path.quadraticBezierTo(0, size.height, size.width, size.height);
-    path.quadraticBezierTo(size.width, 0, 0, 0);
+    path.moveTo(0, size.height/2);
+    path.quadraticBezierTo(size.width/2, size.height, size.width, size.height/2);
+    path.quadraticBezierTo(size.width/2, 0, 0, size.height/2);
     // path.lineTo(10, 10);
     // path.lineTo(100, 100);
     // path.lineTo(200, 10);
