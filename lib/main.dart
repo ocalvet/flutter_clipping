@@ -19,16 +19,16 @@ class _MyAppState extends State<MyApp> {
           clipper: Eye(),
           child: Container(
             color: Colors.red,
-            width: 300.0,
-            height: 300.0,
+            width: 400.0,
+            height: 500.0,
             child: Center(
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(70),
+                  borderRadius: BorderRadius.circular(170),
                   color: Colors.black54
                 ),
-                width: 70,
-                height: 70,
+                width: 170,
+                height: 170,
               ),
             ),
           ),
